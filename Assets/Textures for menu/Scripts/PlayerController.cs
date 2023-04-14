@@ -16,6 +16,12 @@ public class PlayerController : MonoBehaviour
     private bool movingLeft = false;
     private bool movingRight = false;
 
+    //Реализация нажатия кнопок движения на андроиде
+    public bool onLeftBtn = false;
+    public bool onRightBtn = false;
+    public bool onJumpBtn = false;
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -23,13 +29,13 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.A))
+        if (Input.GetKey(KeyCode.A) || onLeftBtn)
         {
             movingLeft = true;
             movingRight = false;
             rb.velocity = new Vector2(-moveSpeed, rb.velocity.y);
         }
-        else if (Input.GetKey(KeyCode.D))
+        else if (Input.GetKey(KeyCode.D)|| onRightBtn)
         {
             movingRight = true;
             movingLeft = false;
@@ -42,8 +48,9 @@ public class PlayerController : MonoBehaviour
             rb.velocity = new Vector2(0f, rb.velocity.y);
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && jumpCount < maxJumps && isGrounded == true)
+        if ((Input.GetKeyDown(KeyCode.Space) || onJumpBtn) && jumpCount < maxJumps && isGrounded == true)
         {
+            onJumpBtn = false;
             rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
             jumpCount++;
         }
@@ -79,5 +86,12 @@ public class PlayerController : MonoBehaviour
         // Handle player death here
         Destroy(gameObject);
     }
+
+    public void jumpclick()
+    {
+        onJumpBtn=true;
+
+    }
+
 
 }
