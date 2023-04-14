@@ -8,4 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/scens for creating/1lvl.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/scens for creating/wasted.unity
+    guid: 3bd7fc408ecb842b6b9a7e516ef00617
+  - enabled: 1
+    path: Assets/scens for creating/Start.unity
+    guid: 4e7f3138df89f554b9bcbdfd962e2c0e
+  - enabled: 1
+    path: Assets/scens for creating/menu.unity
+    guid: 2b5f88aa0b2c0114f87cdb596e02456b
   m_configObjects: {}
