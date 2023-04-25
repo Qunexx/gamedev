@@ -603,12 +603,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 213792416}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b022e004837ba4840be67395f601747a, type: 3}
+  m_Script: {fileID: 11500000, guid: 56bf875db3d7a814693315e589de5f1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bar: {fileID: 782041130}
+  bar: {fileID: 0}
   fill: 0
-  healthText: {fileID: 863339495}
+  healthText: {fileID: 0}
 --- !u!1 &225565850
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,6 +1317,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027baa3b7292e4541861dcf46f8ea908, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damping: 1.5
+  offset: {x: 0, y: 0}
+  faceLeft: 1
 --- !u!1 &534559551
 GameObject:
   m_ObjectHideFlags: 0
@@ -2017,7 +2020,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 8ef5ebafa962dce4797cf19213bfcd04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 123e8fae581676845842aba1348465ca, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2648,7 +2651,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ead5f9e8f2af9514fb6a73dc20aac92b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d43ba1a3f6efa2045b290a30760940d5, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
