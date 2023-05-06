@@ -1,4 +1,8 @@
+using System.Threading.Tasks;
 using UnityEngine;
+using UnityEngine.UI;
+
+
 public class PlayerController : MonoBehaviour
 {
     public float health = 100f;
@@ -20,6 +24,10 @@ public class PlayerController : MonoBehaviour
     public bool onLeftBtn = false;
     public bool onRightBtn = false;
     public bool onJumpBtn = false;
+
+    public GameObject DeathInterface; 
+    private bool isDied = false; //игрок умер?
+
 
 
     void Start()
@@ -74,19 +82,50 @@ public class PlayerController : MonoBehaviour
     }
     public void TakeDamage(float damage)
     {
+        
+        if (isDied) return;
         health -= damage;
         if (health <= 0f)
         {
+            isDied = true;
             Die();
         }
     }
 
     private void Die()
-    {
-        // Handle player death here
-        Destroy(gameObject);
+    {   
+        ShowDeathScreen();// Handle player death here
+            this.gameObject.SetActive(false); //Чтоб не удалялся перс
+            //Destroy(gameObject);
+        
     }
 
+    private void ShowDeathScreen() //показывает экран смерти
+    {
+        Debug.Log(DeathInterface.name);
+        DeathInterface.SetActive(true);
+        fade();
+
+    }
+
+    public async void fade()
+    {   
+        var newColor = new Color(0.0f, 0.0f, 0.0f, 0.0f);
+        var DeathInterfaceImage = DeathInterface.GetComponent<Image>();
+        DeathInterfaceImage.color = newColor;
+
+        
+
+        while (newColor.a < 0.9f)
+        {
+            newColor.a = newColor.a + 0.05f;
+
+            await Task.Delay(100);
+
+            DeathInterfaceImage.color = newColor;
+        }
+
+    }
     public void jumpclick()
     {
         onJumpBtn=true;

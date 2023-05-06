@@ -502,7 +502,7 @@ GameObject:
   - component: {fileID: 228857161}
   - component: {fileID: 228857160}
   m_Layer: 5
-  m_Name: Image
+  m_Name: GameLogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -693,7 +693,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e8b4d4fd13adb7d44b497ede911af87f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3a3f4ed8d944509489eda42fb1d88348, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1663,7 +1663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: ea1c740f3099a0f49bed11124419816b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b510ac98999dc1e4a8a14268f77dda08, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2070,7 +2070,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9d7238b5cbb9a184fa40727a731d1f41, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 12b07bda2e7842742aef05eda6d85a3b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
