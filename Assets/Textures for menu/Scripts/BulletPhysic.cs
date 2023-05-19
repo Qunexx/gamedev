@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
     public float speed = 10f;
     public float gravity = 0.1f;
     public LayerMask collisionMask;
-    public float damage = 10f;
+    public int damage = 10;
 
     private Vector2 velocity;
     private float distanceTravelled;
