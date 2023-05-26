@@ -13,7 +13,7 @@ public class CollisionDamage : MonoBehaviour
         {
             HealthBar healthBar = coll.gameObject.GetComponent<HealthBar>();
             PlayerController playerController = coll.gameObject.GetComponent<PlayerController>();
-            //fill = health - damage
+            //fill = health - Damage
 
 
             healthBar.fill = playerController.health / 100;

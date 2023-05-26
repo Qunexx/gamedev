@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class gun : MonoBehaviour
@@ -10,8 +11,9 @@ public class gun : MonoBehaviour
     [SerializeField] private FixedJoystick _ViewJStk;
     public GameObject bullet;
     public Transform shotpoint;
-
     
+
+
 
 
     //поворот модельки
@@ -20,10 +22,9 @@ public class gun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         //Vector3 difference = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
-        //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
-        float rotz ; //= (Mathf.Atan2(_ViewJStk.Vertical, _ViewJStk.Horizontal) * Mathf.Rad2Deg);
+            //float rotZ = Mathf.Atan2(difference.y, difference.x) * Mathf.Rad2Deg;
+            float rotz ; //= (Mathf.Atan2(_ViewJStk.Vertical, _ViewJStk.Horizontal) * Mathf.Rad2Deg);
         if (_ViewJStk.Vertical == 0 && _ViewJStk.Horizontal == 0)
         {
             rotz = (Mathf.Atan2(0, 0) * Mathf.Rad2Deg);
@@ -53,10 +54,9 @@ public class gun : MonoBehaviour
         */
         transform.rotation = Quaternion.Euler(0, 0, rotz);
 
-
         if (_ViewJStk.Vertical != 0 && _ViewJStk.Horizontal != 0)
         {
-            Instantiate(bullet, shotpoint.position, Quaternion.Euler(0, 0, rotz+90));
+             Instantiate(bullet, shotpoint.position, Quaternion.Euler(0, 0, rotz+90));
         }
 
 
@@ -64,3 +64,4 @@ public class gun : MonoBehaviour
         
     }
 }
+    

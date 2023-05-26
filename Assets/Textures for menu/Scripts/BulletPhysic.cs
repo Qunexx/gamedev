@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
             // Handle collision logic based on the tag of the hit object
             if (hit.collider.CompareTag("Enemy"))
             {
-                // Apply damage to enemy
+                // Apply Damage to enemy
                 EnemyBehavior enemy = hit.collider.GetComponent<EnemyBehavior>();
                 if (enemy != null)
                 {
