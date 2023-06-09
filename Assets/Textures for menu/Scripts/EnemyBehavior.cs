@@ -11,6 +11,7 @@ public class EnemyBehavior : MonoBehaviour
     private Transform playerTransform;
     private float lastAttackTime;
 
+
     private void Start()
     {
         playerTransform = GameObject.FindGameObjectWithTag("Player").transform;
@@ -24,7 +25,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    public void TakeDamage(float damage)
+    public void TakeDamage(int damage)
     {
         health -= damage;
         if (health <= 0f)

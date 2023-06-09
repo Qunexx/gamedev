@@ -5,7 +5,7 @@ public class Bullet : MonoBehaviour
     public float speed = 10f;
     public float gravity = 0.1f;
     public LayerMask collisionMask;
-    public float damage = 10f;
+    public int damage = 10;
 
     private Vector2 velocity;
     private float distanceTravelled;
@@ -43,7 +43,7 @@ public class Bullet : MonoBehaviour
             // Handle collision logic based on the tag of the hit object
             if (hit.collider.CompareTag("Enemy"))
             {
-                // Apply damage to enemy
+                // Apply Damage to enemy
                 EnemyBehavior enemy = hit.collider.GetComponent<EnemyBehavior>();
                 if (enemy != null)
                 {
